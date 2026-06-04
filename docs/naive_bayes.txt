@@ -1,0 +1,14 @@
+Naive Bayes là một thuật toán phân loại dựa trên định lý Bayes với giả định độc lập mạnh mẽ giữa các đặc trưng. Ý tưởng chính là tính xác suất một mẫu thuộc về mỗi lớp và chọn lớp có xác suất cao nhất.
+
+Trực giác cốt lõi: Mặc dù giả định các đặc trưng độc lập là “ngây thơ” (naive), nhưng trong thực tế, Naive Bayes vẫn hoạt động tốt, đặc biệt với dữ liệu văn bản.
+
+Ý tưởng toán học: Định lý Bayes: 
+𝑃(𝑦∣𝑥)=𝑃(𝑥∣𝑦)𝑃(𝑦)(𝑥). Với giả định độc lập, 𝑃(𝑥∣𝑦)=∏𝑃(𝑥𝑖∣𝑦). Mô hình tính toán nhanh và đơn giản.
+
+Ưu điểm: Nhanh, hiệu quả với dữ liệu lớn. Hoạt động tốt với dữ liệu văn bản. Dễ triển khai.
+
+Hạn chế: Giả định độc lập thường không đúng. Hiệu suất giảm khi đặc trưng phụ thuộc mạnh. Không linh hoạt với dữ liệu phức tạp.
+
+Ứng dụng: Phân loại email spam, phân loại văn bản, phân tích cảm xúc. Naive Bayes là thuật toán phổ biến trong NLP.
+
+Liên hệ: Naive Bayes liên quan đến Logistic Regression (cùng phân loại), Overfitting (ít xảy ra do mô hình đơn giản), và KNN (cùng dùng trong phân loại văn bản).

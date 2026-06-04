@@ -1,0 +1,13 @@
+Underfitting là hiện tượng mô hình quá đơn giản, không đủ khả năng học quy luật từ dữ liệu. Kết quả là mô hình có hiệu suất kém cả trên tập huấn luyện lẫn tập kiểm tra.
+
+Trực giác cốt lõi: Khi mô hình không đủ phức tạp, nó không thể nắm bắt được cấu trúc thực sự của dữ liệu. Ví dụ, dùng Linear Regression để mô hình hóa dữ liệu có quan hệ phi tuyến phức tạp sẽ dẫn đến underfitting.
+
+Ý tưởng toán học: Underfitting xảy ra khi cả sai số huấn luyện và sai số kiểm tra đều cao. Nó thường liên quan đến việc chọn mô hình quá đơn giản hoặc không đủ đặc trưng.
+
+Ưu điểm: Mô hình đơn giản, dễ giải thích. Tuy nhiên, hiệu suất thường không đạt yêu cầu.
+
+Hạn chế: Không dự đoán chính xác. Không thể áp dụng cho các bài toán phức tạp. Làm giảm giá trị thực tế của mô hình.
+
+Ứng dụng: Hiểu underfitting giúp chọn mô hình phù hợp hơn. Ví dụ, thay Linear Regression bằng Polynomial Regression có thể cải thiện kết quả.
+
+Liên hệ: Underfitting đối lập với Overfitting. Nó liên quan đến Regularization (có thể gây underfitting nếu quá mạnh), Decision Trees (có thể underfit nếu quá nông), và Neural Networks (cần đủ số tầng để tránh underfitting).

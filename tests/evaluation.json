@@ -1,0 +1,662 @@
+[
+{
+"id": 1,
+"question": "Linear Regression là gì?",
+"ground_truth_answer": "Linear Regression là một thuật toán hồi quy tuyến tính nhằm mô hình hóa mối quan hệ giữa biến đầu vào và biến đầu ra bằng một đường thẳng hoặc siêu phẳng. Nó dựa trên giả định rằng đầu ra có thể biểu diễn như tổ hợp tuyến tính của các đặc trưng.",
+"relevant_documents": ["linear_regression.txt"]
+},
+{
+"id": 2,
+"question": "Logistic Regression dùng để làm gì?",
+"ground_truth_answer": "Logistic Regression được dùng cho phân loại nhị phân. Nó dự đoán xác suất một mẫu thuộc về một lớp nhất định bằng cách ánh xạ đầu ra tuyến tính sang xác suất thông qua hàm sigmoid.",
+"relevant_documents": ["logistic_regression.txt"]
+},
+{
+"id": 3,
+"question": "Gradient Descent hoạt động như thế nào?",
+"ground_truth_answer": "Gradient Descent cập nhật tham số theo hướng ngược lại gradient của hàm mất mát để giảm giá trị hàm này. Nó giống như quá trình 'leo xuống dốc' cho đến khi đạt điểm thấp nhất.",
+"relevant_documents": ["gradient_descent.txt"]
+},
+{
+"id": 4,
+"question": "Overfitting là gì?",
+"ground_truth_answer": "Overfitting là hiện tượng mô hình học quá chi tiết từ dữ liệu huấn luyện, bao gồm cả nhiễu, dẫn đến hiệu suất kém trên dữ liệu mới. Nó xảy ra khi sai số huấn luyện giảm nhưng sai số kiểm tra tăng.",
+"relevant_documents": ["overfitting.txt"]
+},
+{
+"id": 5,
+"question": "Underfitting là gì?",
+"ground_truth_answer": "Underfitting là hiện tượng mô hình quá đơn giản, không đủ khả năng học quy luật từ dữ liệu. Nó dẫn đến sai số cao cả trên tập huấn luyện lẫn tập kiểm tra.",
+"relevant_documents": ["underfitting.txt"]
+},
+{
+"id": 6,
+"question": "Regularization có tác dụng gì?",
+"ground_truth_answer": "Regularization giúp giảm overfitting bằng cách thêm thành phần phạt vào hàm mất mát để hạn chế độ phức tạp của mô hình. Nó ép các hệ số về nhỏ hơn hoặc bằng 0.",
+"relevant_documents": ["regularization.txt"]
+},
+{
+"id": 7,
+"question": "Tại sao cần chia dữ liệu thành train, validation và test?",
+"ground_truth_answer": "Việc chia dữ liệu thành train, validation và test giúp huấn luyện mô hình, chọn siêu tham số, và đánh giá cuối cùng một cách khách quan. Nó giúp phát hiện overfitting và đảm bảo mô hình tổng quát hóa tốt.",
+"relevant_documents": ["train_validation_test_split.txt"]
+},
+{
+"id": 8,
+"question": "Cross-validation là gì?",
+"ground_truth_answer": "Cross-validation là kỹ thuật đánh giá mô hình bằng cách chia dữ liệu thành nhiều phần và huấn luyện/kiểm tra nhiều lần. Kết quả trung bình cho ta đánh giá ổn định và đáng tin cậy hơn.",
+"relevant_documents": ["cross_validation.txt"]
+},
+{
+"id": 9,
+"question": "Decision Tree hoạt động như thế nào?",
+"ground_truth_answer": "Decision Tree phân loại hoặc hồi quy bằng cách chia dữ liệu thành các nhánh dựa trên điều kiện. Mỗi nút chọn đặc trưng để chia nhằm tối đa hóa độ thuần khiết, tiếp tục cho đến khi đạt điều kiện dừng.",
+"relevant_documents": ["decision_tree.txt"]
+},
+{
+"id": 10,
+"question": "Random Forest là gì?",
+"ground_truth_answer": "Random Forest là một mô hình ensemble kết hợp nhiều Decision Trees bằng cách lấy mẫu bootstrap và chọn ngẫu nhiên đặc trưng. Kết quả cuối cùng là trung bình hoặc bỏ phiếu đa số.",
+"relevant_documents": ["random_forest.txt"]
+},
+{
+"id": 11,
+"question": "Boosting khác gì bagging?",
+"ground_truth_answer": "Boosting huấn luyện các mô hình tuần tự, mỗi mô hình mới tập trung vào các mẫu bị dự đoán sai. Bagging tạo nhiều mô hình song song trên các mẫu bootstrap và kết hợp kết quả.",
+"relevant_documents": ["boosting.txt"]
+},
+{
+"id": 12,
+"question": "SVM tìm siêu phẳng như thế nào?",
+"ground_truth_answer": "SVM tìm siêu phẳng phân tách dữ liệu sao cho margin giữa các lớp là lớn nhất. Với dữ liệu phi tuyến, nó dùng kernel trick để ánh xạ sang không gian cao hơn.",
+"relevant_documents": ["svm.txt"]
+},
+{
+"id": 13,
+"question": "KNN dự đoán nhãn bằng cách nào?",
+"ground_truth_answer": "KNN dự đoán nhãn của một điểm dựa trên nhãn của k điểm gần nhất trong tập huấn luyện. Với phân loại, nhãn được quyết định bằng đa số; với hồi quy, giá trị dự đoán là trung bình.",
+"relevant_documents": ["knn.txt"]
+},
+{
+"id": 14,
+"question": "Naive Bayes dựa trên giả định gì?",
+"ground_truth_answer": "Naive Bayes dựa trên giả định rằng các đặc trưng độc lập có điều kiện với lớp. Mặc dù giả định này thường không đúng, mô hình vẫn hoạt động tốt trong nhiều trường hợp.",
+"relevant_documents": ["naive_bayes.txt"]
+},
+{
+"id": 15,
+"question": "PCA dùng để làm gì?",
+"ground_truth_answer": "PCA dùng để giảm chiều dữ liệu bằng cách tìm các hướng mà dữ liệu có phương sai lớn nhất. Nó giúp loại bỏ nhiễu và giữ lại thông tin quan trọng.",
+"relevant_documents": ["pca.txt"]
+},
+{
+"id": 16,
+"question": "SVD phân rã ma trận như thế nào?",
+"ground_truth_answer": "SVD phân rã ma trận A thành ba ma trận: A = U Σ V^T, trong đó U và V là ma trận trực giao, Σ chứa các singular values cho biết mức độ quan trọng của từng thành phần.",
+"relevant_documents": ["svd.txt"]
+},
+{
+"id": 17,
+"question": "Neural Network lấy cảm hứng từ đâu?",
+"ground_truth_answer": "Neural Network lấy cảm hứng từ cấu trúc não bộ, gồm nhiều tầng với các neuron kết nối nhau, có khả năng học các quan hệ phi tuyến phức tạp.",
+"relevant_documents": ["neural_network.txt"]
+},
+{
+"id": 18,
+"question": "Backpropagation dùng để làm gì?",
+"ground_truth_answer": "Backpropagation dùng để tính gradient của hàm mất mát đối với các tham số trong Neural Network bằng quy tắc dây chuyền. Nó cho phép cập nhật tham số bằng Gradient Descent.",
+"relevant_documents": ["backpropagation.txt"]
+},
+{
+"id": 19,
+"question": "Activation Functions có vai trò gì?",
+"ground_truth_answer": "Activation Functions thêm phi tuyến vào Neural Network, cho phép mạng học các mẫu phức tạp. Nếu không có chúng, mạng chỉ là mô hình tuyến tính.",
+"relevant_documents": ["activation_functions.txt"]
+},
+{
+"id": 20,
+"question": "Model Calibration nhằm mục đích gì?",
+"ground_truth_answer": "Model Calibration nhằm điều chỉnh mô hình để xác suất dự đoán phản ánh đúng xác suất thực tế. Nó giúp mô hình đáng tin cậy hơn trong các ứng dụng cần xác suất chính xác.",
+"relevant_documents": ["model_calibration.txt"]
+},
+{
+"id": 21,
+"question": "Mean Squared Error thường dùng trong mô hình nào?",
+"ground_truth_answer": "Mean Squared Error thường dùng trong Linear Regression để đo độ lệch giữa giá trị dự đoán và giá trị thực tế. Nó là hàm mất mát phổ biến cho các bài toán hồi quy.",
+"relevant_documents": ["linear_regression.txt"]
+},
+{
+"id": 22,
+"question": "Hàm sigmoid trong Logistic Regression có đặc điểm gì?",
+"ground_truth_answer": "Hàm sigmoid ánh xạ giá trị thực sang khoảng (0,1), phù hợp để biểu diễn xác suất. Nó có dạng σ(z) = 1/(1+e^-z).",
+"relevant_documents": ["logistic_regression.txt"]
+},
+{
+"id": 23,
+"question": "Learning rate trong Gradient Descent ảnh hưởng thế nào?",
+"ground_truth_answer": "Learning rate quyết định bước đi trong quá trình cập nhật tham số. Nếu quá lớn, mô hình có thể dao động; nếu quá nhỏ, quá trình hội tụ sẽ chậm.",
+"relevant_documents": ["gradient_descent.txt"]
+},
+{
+"id": 24,
+"question": "Overfitting thường xảy ra khi nào?",
+"ground_truth_answer": "Overfitting thường xảy ra khi mô hình quá phức tạp so với dữ liệu, hoặc khi số tham số quá nhiều. Nó dẫn đến sai số huấn luyện thấp nhưng sai số kiểm tra cao.",
+"relevant_documents": ["overfitting.txt"]
+},
+{
+"id": 25,
+"question": "Underfitting thường xảy ra khi nào?",
+"ground_truth_answer": "Underfitting xảy ra khi mô hình quá đơn giản, không đủ khả năng học quy luật từ dữ liệu. Cả sai số huấn luyện và kiểm tra đều cao.",
+"relevant_documents": ["underfitting.txt"]
+},
+{
+"id": 26,
+"question": "L1 Regularization còn gọi là gì?",
+"ground_truth_answer": "L1 Regularization còn gọi là Lasso. Nó thêm tổng trị tuyệt đối của các hệ số vào hàm mất mát, có thể đưa một số hệ số về 0.",
+"relevant_documents": ["regularization.txt"]
+},
+{
+"id": 27,
+"question": "L2 Regularization còn gọi là gì?",
+"ground_truth_answer": "L2 Regularization còn gọi là Ridge. Nó thêm tổng bình phương các hệ số vào hàm mất mát, giúp ổn định mô hình.",
+"relevant_documents": ["regularization.txt"]
+},
+{
+"id": 28,
+"question": "Tỉ lệ chia dữ liệu train/validation/test phổ biến là gì?",
+"ground_truth_answer": "Một tỉ lệ phổ biến là 60-20-20 hoặc 70-15-15, tùy thuộc vào kích thước dữ liệu. Train dùng để huấn luyện, validation để chọn siêu tham số, test để đánh giá cuối cùng.",
+"relevant_documents": ["train_validation_test_split.txt"]
+},
+{
+"id": 29,
+"question": "K-fold cross-validation hoạt động như thế nào?",
+"ground_truth_answer": "K-fold cross-validation chia dữ liệu thành k phần. Mỗi lần, một phần làm validation, k-1 phần còn lại làm train. Kết quả trung bình của k lần cho đánh giá ổn định.",
+"relevant_documents": ["cross_validation.txt"]
+},
+{
+"id": 30,
+"question": "Chỉ số nào thường dùng để chia nút trong Decision Tree?",
+"ground_truth_answer": "Decision Tree thường dùng Gini Index hoặc Entropy để đo độ thuần khiết và chọn đặc trưng chia dữ liệu.",
+"relevant_documents": ["decision_tree.txt"]
+},
+{
+"id": 31,
+"question": "Random Forest dùng phương pháp nào để tạo nhiều cây?",
+"ground_truth_answer": "Random Forest dùng bootstrap sampling để tạo nhiều tập dữ liệu khác nhau, sau đó huấn luyện nhiều Decision Trees và kết hợp kết quả.",
+"relevant_documents": ["random_forest.txt"]
+},
+{
+"id": 32,
+"question": "AdaBoost hoạt động như thế nào?",
+"ground_truth_answer": "AdaBoost gán trọng số cao hơn cho các mẫu bị dự đoán sai, buộc mô hình tiếp theo chú ý nhiều hơn. Kết quả cuối cùng là sự kết hợp có trọng số của nhiều mô hình yếu.",
+"relevant_documents": ["boosting.txt"]
+},
+{
+"id": 33,
+"question": "Margin trong SVM là gì?",
+"ground_truth_answer": "Margin là khoảng cách từ siêu phẳng phân tách đến các điểm dữ liệu gần nhất của mỗi lớp. SVM tối ưu margin để tăng khả năng tổng quát hóa.",
+"relevant_documents": ["svm.txt"]
+},
+{
+"id": 34,
+"question": "Kernel trick trong SVM có tác dụng gì?",
+"ground_truth_answer": "Kernel trick ánh xạ dữ liệu sang không gian cao hơn để có thể phân tách tuyến tính. Nó cho phép SVM xử lý dữ liệu phi tuyến.",
+"relevant_documents": ["svm.txt"]
+},
+{
+"id": 35,
+"question": "Khoảng cách nào thường dùng trong KNN?",
+"ground_truth_answer": "Khoảng cách Euclidean thường được dùng trong KNN để đo độ gần giữa các điểm dữ liệu.",
+"relevant_documents": ["knn.txt"]
+},
+{
+"id": 36,
+"question": "Naive Bayes dựa trên định lý nào?",
+"ground_truth_answer": "Naive Bayes dựa trên định lý Bayes: P(y|x) = P(x|y)P(y)/P(x). Nó giả định các đặc trưng độc lập có điều kiện với lớp.",
+"relevant_documents": ["naive_bayes.txt"]
+},
+{
+"id": 37,
+"question": "PCA tìm các thành phần chính bằng cách nào?",
+"ground_truth_answer": "PCA tính ma trận hiệp phương sai, sau đó tìm eigenvectors và eigenvalues. Các eigenvectors tương ứng với các hướng chính của dữ liệu.",
+"relevant_documents": ["pca.txt"]
+},
+{
+"id": 38,
+"question": "SVD có thể dùng để tính PCA không?",
+"ground_truth_answer": "Có, SVD thường được dùng để tính PCA. Các singular values và vectors từ SVD giúp xác định các thành phần chính.",
+"relevant_documents": ["svd.txt"]
+},
+{
+"id": 39,
+"question": "Một neuron trong Neural Network tính toán gì?",
+"ground_truth_answer": "Một neuron tính toán z = w^Tx + b, sau đó áp dụng hàm kích hoạt để tạo đầu ra.",
+"relevant_documents": ["neural_network.txt"]
+},
+{
+"id": 40,
+"question": "Backpropagation dựa trên quy tắc nào?",
+"ground_truth_answer": "Backpropagation dựa trên quy tắc dây chuyền (chain rule) để tính gradient của hàm mất mát đối với từng tham số.",
+"relevant_documents": ["backpropagation.txt"]
+},
+{
+"id": 41,
+"question": "Sigmoid activation function có đặc điểm gì?",
+"ground_truth_answer": "Sigmoid ánh xạ giá trị thực sang khoảng (0,1). Nó thường dùng trong Logistic Regression và Neural Networks để biểu diễn xác suất.",
+"relevant_documents": ["activation_functions.txt"]
+},
+{
+"id": 42,
+"question": "ReLU activation function có đặc điểm gì?",
+"ground_truth_answer": "ReLU có dạng f(z) = max(0,z). Nó đơn giản, hiệu quả và thường dùng trong các mạng sâu.",
+"relevant_documents": ["activation_functions.txt"]
+},
+{
+"id": 43,
+"question": "Model Calibration có thể dùng kỹ thuật nào?",
+"ground_truth_answer": "Model Calibration có thể dùng Platt Scaling hoặc Isotonic Regression để điều chỉnh xác suất dự đoán.",
+"relevant_documents": ["model_calibration.txt"]
+},
+{
+"id": 44,
+"question": "Expected Calibration Error (ECE) đo lường gì?",
+"ground_truth_answer": "ECE đo sự khác biệt giữa xác suất dự đoán và xác suất thực tế. Nó cho biết mức độ calibration của mô hình.",
+"relevant_documents": ["model_calibration.txt"]
+},
+{
+"id": 45,
+"question": "Linear Regression có thể giải bằng công thức nào?",
+"ground_truth_answer": "Linear Regression có thể giải bằng Normal Equation, một công thức đóng để tìm tham số tối ưu.",
+"relevant_documents": ["linear_regression.txt"]
+},
+{
+"id": 46,
+"question": "Log-loss thường dùng trong mô hình nào?",
+"ground_truth_answer": "Log-loss, hay cross-entropy, thường dùng trong Logistic Regression để đo độ lệch giữa xác suất dự đoán và thực tế.",
+"relevant_documents": ["logistic_regression.txt"]
+},
+{
+"id": 47,
+"question": "Stochastic Gradient Descent khác gì Batch Gradient Descent?",
+"ground_truth_answer": "Stochastic Gradient Descent cập nhật tham số sau mỗi mẫu, trong khi Batch Gradient Descent cập nhật sau khi tính gradient trên toàn bộ dữ liệu.",
+"relevant_documents": ["gradient_descent.txt"]
+},
+{
+"id": 48,
+"question": "Overfitting có thể giảm bằng cách nào?",
+"ground_truth_answer": "Overfitting có thể giảm bằng Regularization, Cross-validation, hoặc dùng tập dữ liệu lớn hơn.",
+"relevant_documents": ["overfitting.txt"]
+},
+{
+"id": 49,
+"question": "Underfitting có thể khắc phục bằng cách nào?",
+"ground_truth_answer": "Underfitting có thể khắc phục bằng cách dùng mô hình phức tạp hơn, thêm đặc trưng phù hợp, hoặc giảm mức độ regularization nếu nó quá mạnh. Ví dụ, thay Linear Regression bằng Polynomial Regression có thể cải thiện kết quả.",
+"relevant_documents": ["underfitting.txt"]
+},
+{
+"id": 50,
+"question": "Model Calibration thường được đánh giá bằng công cụ nào?",
+"ground_truth_answer": "Model Calibration thường được đánh giá bằng biểu đồ reliability hoặc chỉ số Expected Calibration Error (ECE). Các công cụ này cho thấy mức độ khớp giữa xác suất dự đoán và xác suất thực tế.",
+"relevant_documents": ["model_calibration.txt"]
+},
+{
+"id": 51,
+"question": "Random Forest khác gì so với một Decision Tree đơn lẻ?",
+"ground_truth_answer": "Random Forest kết hợp nhiều Decision Trees bằng cách lấy mẫu bootstrap và chọn ngẫu nhiên đặc trưng, giúp giảm overfitting và tăng độ chính xác. Trong khi đó, một Decision Tree đơn lẻ dễ overfit và ít ổn định hơn.",
+"relevant_documents": ["random_forest.txt", "decision_tree.txt"]
+},
+{
+"id": 52,
+"question": "Boosting và Random Forest khác nhau thế nào?",
+"ground_truth_answer": "Boosting huấn luyện các mô hình tuần tự, mỗi mô hình mới tập trung vào các mẫu bị dự đoán sai. Random Forest tạo nhiều cây song song bằng bagging và kết hợp kết quả. Boosting giảm bias, còn Random Forest chủ yếu giảm variance.",
+"relevant_documents": ["boosting.txt", "random_forest.txt"]
+},
+{
+"id": 53,
+"question": "Overfitting có thể được phát hiện bằng cách nào?",
+"ground_truth_answer": "Overfitting có thể được phát hiện bằng cách so sánh sai số trên tập huấn luyện và tập validation/test. Nếu sai số huấn luyện thấp nhưng sai số validation/test cao, mô hình đã overfit.",
+"relevant_documents": ["overfitting.txt", "train_validation_test_split.txt"]
+},
+{
+"id": 54,
+"question": "Underfitting và Overfitting khác nhau thế nào?",
+"ground_truth_answer": "Underfitting xảy ra khi mô hình quá đơn giản, dẫn đến sai số cao cả trên tập huấn luyện và kiểm tra. Overfitting xảy ra khi mô hình quá phức tạp, sai số huấn luyện thấp nhưng sai số kiểm tra cao.",
+"relevant_documents": ["underfitting.txt", "overfitting.txt"]
+},
+{
+"id": 55,
+"question": "Regularization giúp gì trong Logistic Regression?",
+"ground_truth_answer": "Regularization trong Logistic Regression thêm thành phần phạt vào hàm mất mát, giúp hạn chế hệ số quá lớn và giảm overfitting. Nó cải thiện khả năng tổng quát hóa của mô hình.",
+"relevant_documents": ["regularization.txt", "logistic_regression.txt"]
+},
+{
+"id": 56,
+"question": "Cross-validation có thể dùng để chọn tham số nào trong Regularization?",
+"ground_truth_answer": "Cross-validation thường dùng để chọn tham số λ trong Regularization. Nó giúp tìm mức độ phạt tối ưu để cân bằng giữa underfitting và overfitting.",
+"relevant_documents": ["cross_validation.txt", "regularization.txt"]
+},
+{
+"id": 57,
+"question": "Gradient Descent liên quan thế nào đến Backpropagation?",
+"ground_truth_answer": "Backpropagation tính gradient của hàm mất mát đối với các tham số trong Neural Network. Gradient này sau đó được dùng trong Gradient Descent để cập nhật tham số.",
+"relevant_documents": ["gradient_descent.txt", "backpropagation.txt"]
+},
+{
+"id": 58,
+"question": "Activation Functions ảnh hưởng thế nào đến Backpropagation?",
+"ground_truth_answer": "Activation Functions quyết định gradient truyền ngược trong Backpropagation. Ví dụ, sigmoid dễ gây vanishing gradient, trong khi ReLU giúp gradient ổn định hơn.",
+"relevant_documents": ["activation_functions.txt", "backpropagation.txt"]
+},
+{
+"id": 59,
+"question": "PCA thường được áp dụng trước KNN để làm gì?",
+"ground_truth_answer": "PCA giảm chiều dữ liệu, giúp loại bỏ nhiễu và tránh curse of dimensionality. Điều này làm KNN hiệu quả hơn vì khoảng cách trong không gian nhiều chiều trở nên đáng tin cậy hơn.",
+"relevant_documents": ["pca.txt", "knn.txt"]
+},
+{
+"id": 60,
+"question": "Naive Bayes và Logistic Regression khác nhau thế nào?",
+"ground_truth_answer": "Naive Bayes dựa trên định lý Bayes với giả định độc lập giữa các đặc trưng, trong khi Logistic Regression mô hình hóa log-odds tuyến tính theo đặc trưng. Logistic Regression thường linh hoạt hơn, còn Naive Bayes nhanh và hiệu quả với dữ liệu văn bản.",
+"relevant_documents": ["naive_bayes.txt", "logistic_regression.txt"]
+},
+{
+"id": 61,
+"question": "SVM và Logistic Regression có điểm chung gì?",
+"ground_truth_answer": "Cả SVM và Logistic Regression đều là thuật toán phân loại nhị phân dựa trên đặc trưng tuyến tính. Tuy nhiên, Logistic Regression cho xác suất, còn SVM tối ưu margin để phân tách dữ liệu.",
+"relevant_documents": ["svm.txt", "logistic_regression.txt"]
+},
+{
+"id": 62,
+"question": "Decision Tree dễ overfit, vậy Random Forest khắc phục thế nào?",
+"ground_truth_answer": "Decision Tree dễ overfit khi cây quá sâu. Random Forest khắc phục bằng cách kết hợp nhiều cây huấn luyện trên các mẫu bootstrap và đặc trưng ngẫu nhiên, giúp giảm variance và tăng độ chính xác.",
+"relevant_documents": ["decision_tree.txt", "random_forest.txt", "overfitting.txt"]
+},
+{
+"id": 63,
+"question": "Gradient Descent có thể dùng trong Logistic Regression không?",
+"ground_truth_answer": "Có, Logistic Regression thường tối ưu tham số bằng Gradient Descent hoặc các biến thể. Gradient Descent giúp giảm log-loss bằng cách cập nhật tham số theo hướng ngược gradient.",
+"relevant_documents": ["gradient_descent.txt", "logistic_regression.txt"]
+},
+{
+"id": 64,
+"question": "Neural Network có thể bị overfit không?",
+"ground_truth_answer": "Có, Neural Network dễ bị overfit do số lượng tham số lớn. Regularization, dropout, và cross-validation thường được dùng để giảm overfitting.",
+"relevant_documents": ["neural_network.txt", "overfitting.txt", "regularization.txt"]
+},
+{
+"id": 65,
+"question": "SVD và PCA liên quan thế nào?",
+"ground_truth_answer": "PCA thường được tính bằng SVD. Các singular values và vectors từ SVD giúp xác định các thành phần chính trong PCA.",
+"relevant_documents": ["svd.txt", "pca.txt"]
+},
+{
+"id": 66,
+"question": "Model Calibration có thể dùng Logistic Regression như thế nào?",
+"ground_truth_answer": "Platt Scaling là một kỹ thuật calibration dùng Logistic Regression để điều chỉnh xác suất dự đoán của mô hình, giúp chúng phản ánh đúng xác suất thực tế.",
+"relevant_documents": ["model_calibration.txt", "logistic_regression.txt"]
+},
+{
+"id": 67,
+"question": "Cross-validation giúp gì trong việc chọn siêu tham số của SVM?",
+"ground_truth_answer": "Cross-validation giúp chọn siêu tham số như C và kernel trong SVM. Nó đảm bảo mô hình có khả năng tổng quát hóa tốt mà không overfit.",
+"relevant_documents": ["cross_validation.txt", "svm.txt"]
+},
+{
+"id": 68,
+"question": "Boosting thường dùng mô hình yếu nào?",
+"ground_truth_answer": "Boosting thường dùng Decision Trees nông làm mô hình yếu. Các cây này được huấn luyện tuần tự, mỗi cây tập trung vào lỗi của cây trước.",
+"relevant_documents": ["boosting.txt", "decision_tree.txt"]
+},
+{
+"id": 69,
+"question": "KNN có thể bị ảnh hưởng bởi curse of dimensionality không?",
+"ground_truth_answer": "Có, KNN bị ảnh hưởng bởi curse of dimensionality vì khoảng cách trong không gian nhiều chiều trở nên kém ý nghĩa. PCA thường được dùng để giảm chiều trước khi áp dụng KNN.",
+"relevant_documents": ["knn.txt", "pca.txt"]
+},
+{
+"id": 70,
+"question": "Regularization có thể gây underfitting không?",
+"ground_truth_answer": "Có, nếu tham số λ trong Regularization quá lớn, mô hình sẽ bị ép quá mạnh, dẫn đến underfitting và không học được quy luật từ dữ liệu.",
+"relevant_documents": ["regularization.txt", "underfitting.txt"]
+},
+{
+"id": 71,
+"question": "Cross-validation và Train/Validation/Test Split khác nhau thế nào?",
+"ground_truth_answer": "Train/Validation/Test Split chia dữ liệu một lần thành ba phần cố định. Cross-validation chia dữ liệu thành nhiều phần và lặp lại quá trình huấn luyện/kiểm tra nhiều lần, cho kết quả trung bình ổn định hơn.",
+"relevant_documents": ["cross_validation.txt", "train_validation_test_split.txt"]
+},
+{
+"id": 72,
+"question": "Regularization có thể giúp giảm overfitting trong Neural Networks không?",
+"ground_truth_answer": "Có, Regularization như L2 hoặc dropout giúp giảm overfitting trong Neural Networks bằng cách hạn chế độ phức tạp của mô hình và ngăn mạng học quá chi tiết từ dữ liệu.",
+"relevant_documents": ["regularization.txt", "neural_network.txt", "overfitting.txt"]
+},
+{
+"id": 73,
+"question": "Decision Tree và KNN khác nhau thế nào?",
+"ground_truth_answer": "Decision Tree phân loại bằng cách chia dữ liệu theo đặc trưng thành các nhánh. KNN phân loại dựa trên khoảng cách đến k láng giềng gần nhất. Decision Tree xây dựng mô hình rõ ràng, còn KNN dựa trực tiếp vào dữ liệu.",
+"relevant_documents": ["decision_tree.txt", "knn.txt"]
+},
+{
+"id": 74,
+"question": "Naive Bayes và KNN có điểm chung gì?",
+"ground_truth_answer": "Naive Bayes và KNN đều là thuật toán phân loại đơn giản, thường dùng trong văn bản hoặc hình ảnh. Tuy nhiên, Naive Bayes dựa trên xác suất với giả định độc lập, còn KNN dựa trên khoảng cách.",
+"relevant_documents": ["naive_bayes.txt", "knn.txt"]
+},
+{
+"id": 75,
+"question": "SVM và Random Forest khác nhau thế nào?",
+"ground_truth_answer": "SVM tìm siêu phẳng tối ưu để phân tách dữ liệu, trong khi Random Forest kết hợp nhiều Decision Trees để giảm variance. SVM mạnh với dữ liệu có margin rõ, Random Forest mạnh với dữ liệu phức tạp và nhiều đặc trưng.",
+"relevant_documents": ["svm.txt", "random_forest.txt"]
+},
+{
+"id": 76,
+"question": "Boosting và Gradient Descent có điểm chung gì?",
+"ground_truth_answer": "Boosting và Gradient Descent đều là quá trình lặp để cải thiện mô hình. Boosting lặp qua nhiều mô hình yếu, mỗi mô hình học từ lỗi trước. Gradient Descent lặp để cập nhật tham số theo hướng giảm gradient.",
+"relevant_documents": ["boosting.txt", "gradient_descent.txt"]
+},
+{
+"id": 77,
+"question": "PCA có thể giúp Logistic Regression thế nào?",
+"ground_truth_answer": "PCA giảm chiều dữ liệu, loại bỏ nhiễu và đặc trưng dư thừa. Logistic Regression sau đó hoạt động hiệu quả hơn, tránh overfitting và giảm chi phí tính toán.",
+"relevant_documents": ["pca.txt", "logistic_regression.txt"]
+},
+{
+"id": 78,
+"question": "Neural Network và Logistic Regression có điểm chung gì?",
+"ground_truth_answer": "Cả Neural Network và Logistic Regression đều dựa trên tổ hợp tuyến tính của đặc trưng. Tuy nhiên, Neural Network thêm nhiều tầng và activation functions để học quan hệ phi tuyến, còn Logistic Regression chỉ dùng sigmoid.",
+"relevant_documents": ["neural_network.txt", "logistic_regression.txt"]
+},
+{
+"id": 79,
+"question": "Backpropagation và Gradient Descent phối hợp thế nào?",
+"ground_truth_answer": "Backpropagation tính gradient của hàm mất mát đối với từng tham số trong mạng. Gradient Descent dùng các gradient này để cập nhật tham số theo hướng giảm lỗi.",
+"relevant_documents": ["backpropagation.txt", "gradient_descent.txt"]
+},
+{
+"id": 80,
+"question": "Activation Functions và Logistic Regression liên quan thế nào?",
+"ground_truth_answer": "Logistic Regression dùng hàm sigmoid để ánh xạ đầu ra tuyến tính sang xác suất. Đây cũng là một activation function phổ biến trong Neural Networks.",
+"relevant_documents": ["activation_functions.txt", "logistic_regression.txt"]
+},
+{
+"id": 81,
+"question": "Model Calibration và Cross-validation có thể kết hợp thế nào?",
+"ground_truth_answer": "Cross-validation có thể dùng để đánh giá mức độ calibration của mô hình trên nhiều tập dữ liệu khác nhau. Điều này giúp đảm bảo xác suất dự đoán đáng tin cậy hơn.",
+"relevant_documents": ["model_calibration.txt", "cross_validation.txt"]
+},
+{
+"id": 82,
+"question": "Decision Tree và Overfitting liên quan thế nào?",
+"ground_truth_answer": "Decision Tree dễ overfit nếu cây quá sâu, vì nó học chi tiết cả nhiễu trong dữ liệu. Regularization hoặc Random Forest thường được dùng để giảm overfitting.",
+"relevant_documents": ["decision_tree.txt", "overfitting.txt"]
+},
+{
+"id": 83,
+"question": "Random Forest và Bagging có điểm chung gì?",
+"ground_truth_answer": "Random Forest là một dạng bagging, vì nó tạo nhiều mô hình trên các mẫu bootstrap và kết hợp kết quả. Điểm khác biệt là Random Forest còn chọn ngẫu nhiên đặc trưng tại mỗi nút.",
+"relevant_documents": ["random_forest.txt", "decision_tree.txt"]
+},
+{
+"id": 84,
+"question": "Boosting và Overfitting liên quan thế nào?",
+"ground_truth_answer": "Boosting có thể gây overfitting nếu số vòng lặp quá nhiều, vì mô hình sẽ học cả nhiễu. Cần kiểm soát số vòng lặp và dùng regularization để giảm nguy cơ này.",
+"relevant_documents": ["boosting.txt", "overfitting.txt"]
+},
+{
+"id": 85,
+"question": "SVM và Regularization liên quan thế nào?",
+"ground_truth_answer": "SVM có tham số C đóng vai trò như regularization. C nhỏ cho margin lớn nhưng có thể underfit, C lớn cho margin nhỏ nhưng dễ overfit.",
+"relevant_documents": ["svm.txt", "regularization.txt"]
+},
+{
+"id": 86,
+"question": "KNN và Underfitting liên quan thế nào?",
+"ground_truth_answer": "Nếu chọn k quá lớn, KNN có thể underfit vì dự đoán bị ảnh hưởng bởi quá nhiều láng giềng. Ngược lại, k quá nhỏ dễ gây overfit.",
+"relevant_documents": ["knn.txt", "underfitting.txt"]
+},
+{
+"id": 87,
+"question": "Naive Bayes và Overfitting liên quan thế nào?",
+"ground_truth_answer": "Naive Bayes ít bị overfit do mô hình đơn giản và giả định độc lập. Tuy nhiên, nếu dữ liệu không phù hợp với giả định, hiệu suất có thể giảm.",
+"relevant_documents": ["naive_bayes.txt", "overfitting.txt"]
+},
+{
+"id": 88,
+"question": "PCA và Curse of Dimensionality liên quan thế nào?",
+"ground_truth_answer": "Curse of Dimensionality làm khoảng cách trong không gian nhiều chiều trở nên kém ý nghĩa. PCA giảm chiều dữ liệu, giúp các thuật toán như KNN hoạt động tốt hơn.",
+"relevant_documents": ["pca.txt", "knn.txt"]
+},
+{
+"id": 89,
+"question": "Neural Network và Activation Functions liên quan thế nào?",
+"ground_truth_answer": "Activation Functions là thành phần cơ bản của Neural Networks. Chúng thêm phi tuyến, cho phép mạng học các mẫu phức tạp thay vì chỉ tuyến tính.",
+"relevant_documents": ["neural_network.txt", "activation_functions.txt"]
+},
+{
+"id": 90,
+"question": "Model Calibration và Logistic Regression liên quan thế nào?",
+"ground_truth_answer": "Platt Scaling dùng Logistic Regression để điều chỉnh xác suất dự đoán, giúp mô hình được calibrate tốt hơn. Đây là một kỹ thuật phổ biến trong calibration.",
+"relevant_documents": ["model_calibration.txt", "logistic_regression.txt"]
+},
+{
+"id": 91,
+"question": "Tại sao PCA thường được áp dụng trước khi huấn luyện Logistic Regression?",
+"ground_truth_answer": "PCA giúp giảm chiều dữ liệu, loại bỏ nhiễu và đặc trưng dư thừa. Logistic Regression sau đó hoạt động hiệu quả hơn, tránh overfitting và giảm chi phí tính toán.",
+"relevant_documents": ["pca.txt", "logistic_regression.txt"]
+},
+{
+"id": 92,
+"question": "Gradient Descent và Regularization phối hợp thế nào trong việc huấn luyện mô hình?",
+"ground_truth_answer": "Gradient Descent tối ưu hàm mất mát, trong khi Regularization thêm thành phần phạt vào hàm này để hạn chế độ phức tạp. Sự kết hợp giúp mô hình vừa hội tụ vừa tránh overfitting.",
+"relevant_documents": ["gradient_descent.txt", "regularization.txt"]
+},
+{
+"id": 93,
+"question": "Neural Network có thể bị underfit không, và nguyên nhân là gì?",
+"ground_truth_answer": "Neural Network có thể bị underfit nếu số tầng hoặc số neuron quá ít, khiến mô hình không đủ khả năng học quy luật phức tạp. Regularization quá mạnh cũng có thể gây underfitting.",
+"relevant_documents": ["neural_network.txt", "underfitting.txt", "regularization.txt"]
+},
+{
+"id": 94,
+"question": "Cross-validation giúp gì trong việc calibrate mô hình?",
+"ground_truth_answer": "Cross-validation có thể dùng để đánh giá mức độ calibration của mô hình trên nhiều tập dữ liệu khác nhau. Điều này đảm bảo xác suất dự đoán phản ánh đúng xác suất thực tế.",
+"relevant_documents": ["cross_validation.txt", "model_calibration.txt"]
+},
+{
+"id": 95,
+"question": "Boosting và Overfitting có thể xảy ra đồng thời không?",
+"ground_truth_answer": "Có, Boosting có thể gây overfitting nếu số vòng lặp quá nhiều, vì mô hình sẽ học cả nhiễu. Cần kiểm soát số vòng lặp và dùng regularization để giảm nguy cơ này.",
+"relevant_documents": ["boosting.txt", "overfitting.txt", "regularization.txt"]
+},
+{
+"id": 96,
+"question": "SVM và PCA có thể kết hợp thế nào?",
+"ground_truth_answer": "PCA giảm chiều dữ liệu, loại bỏ nhiễu và đặc trưng dư thừa. Sau đó, SVM có thể phân tách dữ liệu hiệu quả hơn trong không gian thấp chiều, tránh curse of dimensionality.",
+"relevant_documents": ["svm.txt", "pca.txt"]
+},
+{
+"id": 97,
+"question": "Decision Tree và Gradient Descent khác nhau thế nào trong cách tối ưu?",
+"ground_truth_answer": "Decision Tree tối ưu bằng cách chọn đặc trưng chia dữ liệu dựa trên chỉ số như Gini hoặc Entropy. Gradient Descent tối ưu bằng cách cập nhật tham số theo hướng ngược gradient của hàm mất mát.",
+"relevant_documents": ["decision_tree.txt", "gradient_descent.txt"]
+},
+{
+"id": 98,
+"question": "Naive Bayes và Model Calibration có thể kết hợp không?",
+"ground_truth_answer": "Có, Naive Bayes thường cho xác suất không chính xác. Model Calibration như Platt Scaling hoặc Isotonic Regression có thể điều chỉnh để xác suất phản ánh đúng thực tế.",
+"relevant_documents": ["naive_bayes.txt", "model_calibration.txt"]
+},
+{
+"id": 99,
+"question": "Neural Network và SVD có thể liên quan thế nào?",
+"ground_truth_answer": "SVD có thể dùng để giảm chiều embedding trong Neural Networks, giúp giảm chi phí tính toán và loại bỏ nhiễu. Nó hỗ trợ mạng học hiệu quả hơn.",
+"relevant_documents": ["neural_network.txt", "svd.txt"]
+},
+{
+"id": 100,
+"question": "Activation Functions và Overfitting có liên hệ gì?",
+"ground_truth_answer": "Activation Functions ảnh hưởng đến khả năng học của mạng. Nếu chọn hàm không phù hợp, mạng có thể học quá chi tiết và overfit. Ví dụ, sigmoid dễ gây vanishing gradient, làm huấn luyện không ổn định.",
+"relevant_documents": ["activation_functions.txt", "overfitting.txt", "neural_network.txt"]
+},
+{
+"id": 101,
+"question": "Gradient Descent và SVM có thể liên quan thế nào?",
+"ground_truth_answer": "SVM tối ưu siêu phẳng phân tách dữ liệu bằng cách giải bài toán tối ưu. Gradient Descent có thể được dùng để tìm nghiệm gần đúng cho các tham số trong SVM, đặc biệt khi dữ liệu lớn.",
+"relevant_documents": ["gradient_descent.txt", "svm.txt"]
+},
+{
+"id": 102,
+"question": "Decision Tree và Random Forest phối hợp thế nào trong ensemble learning?",
+"ground_truth_answer": "Random Forest là một tập hợp nhiều Decision Trees. Nó dùng bagging để huấn luyện nhiều cây trên các mẫu bootstrap và kết hợp kết quả, giúp giảm variance và tăng độ chính xác so với một cây đơn lẻ.",
+"relevant_documents": ["decision_tree.txt", "random_forest.txt", "boosting.txt"]
+},
+{
+"id": 103,
+"question": "Naive Bayes và Logistic Regression có thể được dùng cùng nhau không?",
+"ground_truth_answer": "Có, Naive Bayes có thể dùng như baseline nhanh, trong khi Logistic Regression cho kết quả xác suất chính xác hơn. Kết hợp cả hai giúp so sánh và chọn mô hình phù hợp với dữ liệu.",
+"relevant_documents": ["naive_bayes.txt", "logistic_regression.txt"]
+},
+{
+"id": 104,
+"question": "PCA và Overfitting liên quan thế nào?",
+"ground_truth_answer": "PCA giảm chiều dữ liệu, loại bỏ đặc trưng dư thừa và nhiễu. Điều này giúp mô hình tránh học quá chi tiết và giảm nguy cơ overfitting.",
+"relevant_documents": ["pca.txt", "overfitting.txt"]
+},
+{
+"id": 105,
+"question": "Neural Network và Cross-validation phối hợp thế nào?",
+"ground_truth_answer": "Cross-validation giúp đánh giá Neural Network trên nhiều tập dữ liệu khác nhau, phát hiện overfitting và chọn siêu tham số như learning rate hoặc số tầng phù hợp.",
+"relevant_documents": ["neural_network.txt", "cross_validation.txt", "overfitting.txt"]
+},
+{
+"id": 106,
+"question": "Backpropagation và Regularization phối hợp thế nào?",
+"ground_truth_answer": "Backpropagation tính gradient để cập nhật tham số. Regularization thêm thành phần phạt vào hàm mất mát, khiến gradient điều chỉnh tham số theo hướng giảm độ phức tạp, giúp tránh overfitting.",
+"relevant_documents": ["backpropagation.txt", "regularization.txt", "overfitting.txt"]
+},
+{
+"id": 107,
+"question": "Activation Functions và Gradient Descent phối hợp thế nào?",
+"ground_truth_answer": "Activation Functions ảnh hưởng đến gradient trong quá trình Backpropagation. Gradient Descent dùng các gradient này để cập nhật tham số. Nếu activation gây vanishing gradient, Gradient Descent sẽ hội tụ chậm hoặc không hiệu quả.",
+"relevant_documents": ["activation_functions.txt", "gradient_descent.txt", "backpropagation.txt"]
+},
+{
+"id": 108,
+"question": "Model Calibration và Overfitting có thể liên quan thế nào?",
+"ground_truth_answer": "Model Calibration điều chỉnh xác suất dự đoán để phản ánh đúng thực tế. Nếu mô hình bị overfit, calibration có thể cải thiện độ tin cậy của xác suất, nhưng không giải quyết tận gốc vấn đề overfitting.",
+"relevant_documents": ["model_calibration.txt", "overfitting.txt"]
+},
+{
+"id": 109,
+"question": "SVD và Regularization có thể kết hợp thế nào?",
+"ground_truth_answer": "SVD có thể dùng để giảm chiều dữ liệu, loại bỏ thành phần ít quan trọng. Kết hợp với Regularization giúp mô hình ổn định hơn và tránh overfitting khi dữ liệu có nhiều đặc trưng.",
+"relevant_documents": ["svd.txt", "regularization.txt", "overfitting.txt"]
+},
+{
+"id": 110,
+"question": "Neural Network và Model Calibration phối hợp thế nào?",
+"ground_truth_answer": "Neural Network thường cho xác suất không chính xác. Model Calibration như Platt Scaling hoặc Isotonic Regression có thể điều chỉnh để xác suất phản ánh đúng thực tế, đặc biệt quan trọng trong các ứng dụng y tế hoặc tài chính.",
+"relevant_documents": ["neural_network.txt", "model_calibration.txt", "logistic_regression.txt"]
+}
+]

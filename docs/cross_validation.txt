@@ -1,0 +1,13 @@
+Cross-validation là một kỹ thuật đánh giá mô hình bằng cách chia dữ liệu thành nhiều phần và huấn luyện/kiểm tra nhiều lần. Ý tưởng chính là sử dụng dữ liệu hiệu quả hơn và có đánh giá ổn định hơn.
+
+Trực giác cốt lõi: Thay vì chỉ chia dữ liệu một lần, cross-validation chia thành k phần (folds). Mỗi lần, một phần được dùng làm validation, phần còn lại để huấn luyện. Kết quả trung bình cho ta đánh giá đáng tin cậy.
+
+Ý tưởng toán học: K-fold cross-validation: chia dữ liệu thành k phần. Với mỗi i, huấn luyện trên k-1 phần và kiểm tra trên phần i. Kết quả là trung bình của k lần. Một biến thể là Leave-One-Out (LOO).
+
+Ưu điểm: Sử dụng dữ liệu hiệu quả. Đánh giá ổn định hơn. Giúp chọn siêu tham số tốt hơn.
+
+Hạn chế: Tốn thời gian tính toán. Không phù hợp với dữ liệu cực lớn. Có thể phức tạp khi dữ liệu không đồng nhất.
+
+Ứng dụng: Chọn siêu tham số trong Regularization, đánh giá mô hình Logistic Regression, SVM, Decision Trees. Cross-validation là chuẩn mực trong nghiên cứu.
+
+Liên hệ: Liên quan đến Train/Validation/Test Split, Regularization (chọn 𝜆), Overfitting (phát hiện qua cross-validation).

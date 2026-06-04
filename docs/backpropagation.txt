@@ -1,0 +1,14 @@
+Backpropagation là thuật toán tối ưu quan trọng trong Neural Networks. Nó được dùng để tính gradient của hàm mất mát đối với các tham số bằng cách áp dụng quy tắc dây chuyền (chain rule).
+
+Trực giác cốt lõi: Nếu ta biết lỗi ở đầu ra, ta có thể “lan truyền ngược” lỗi này qua các tầng để biết mỗi tham số ảnh hưởng thế nào. Từ đó, ta cập nhật tham số để giảm lỗi.
+
+Ý tưởng toán học: Với hàm mất mát 
+𝐿, Backpropagation tính ∂𝐿/∂𝑤 cho từng tham số bằng chain rule. Gradient sau đó được dùng trong Gradient Descent để cập nhật tham số.
+
+Ưu điểm: Hiệu quả, có thể áp dụng cho mạng nhiều tầng. Cho phép huấn luyện Deep Neural Networks. Tính toán tự động bằng frameworks hiện đại.
+
+Hạn chế: Có thể gặp vấn đề vanishing/exploding gradients. Tốn tài nguyên tính toán. Khó trực quan hóa.
+
+Ứng dụng: Huấn luyện Neural Networks trong hầu hết các lĩnh vực: hình ảnh, NLP, âm thanh. Backpropagation là nền tảng của Deep Learning.
+
+Liên hệ: Backpropagation liên quan đến Gradient Descent (tối ưu), Neural Networks (ứng dụng chính), Activation Functions (ảnh hưởng gradient), và Regularization (giúp ổn định huấn luyện).

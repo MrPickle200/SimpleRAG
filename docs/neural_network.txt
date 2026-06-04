@@ -1,0 +1,14 @@
+Neural Network là một mô hình Machine Learning lấy cảm hứng từ cấu trúc não bộ. Nó bao gồm nhiều tầng (layers) với các nút (neurons) kết nối nhau, có khả năng học các quan hệ phi tuyến phức tạp.
+
+Trực giác cốt lõi: Neural Network giống như một hệ thống nhiều lớp biến đổi dữ liệu. Mỗi lớp trích xuất đặc trưng từ dữ liệu, và các lớp sau kết hợp chúng để đưa ra dự đoán. Điều này cho phép mô hình học các mẫu phức tạp.
+
+Ý tưởng toán học: Mỗi neuron thực hiện phép tính 
+𝑧=𝑤𝑇𝑥+𝑏, sau đó áp dụng hàm kích hoạt (activation function). Các tầng được kết nối và tối ưu bằng Gradient Descent thông qua Backpropagation.
+
+Ưu điểm: Có khả năng học quan hệ phi tuyến phức tạp. Linh hoạt với nhiều loại dữ liệu. Là nền tảng của Deep Learning.
+
+Hạn chế: Cần nhiều dữ liệu và tài nguyên tính toán. Khó giải thích. Dễ overfit nếu không có regularization.
+
+Ứng dụng: Nhận dạng hình ảnh, xử lý ngôn ngữ tự nhiên, dự đoán chuỗi thời gian. Neural Networks là công cụ mạnh mẽ trong AI hiện đại.
+
+Liên hệ: Neural Network liên quan đến Backpropagation (tối ưu tham số), Activation Functions (giúp học phi tuyến), Gradient Descent (tối ưu), và Overfitting (cần kiểm soát).

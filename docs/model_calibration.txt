@@ -1,0 +1,13 @@
+Model Calibration là quá trình điều chỉnh mô hình để xác suất dự đoán phản ánh đúng xác suất thực tế. Ý tưởng chính là đảm bảo mô hình không chỉ phân loại đúng mà còn đưa ra xác suất đáng tin cậy.
+
+Trực giác cốt lõi: Một mô hình có thể dự đoán đúng nhãn nhưng xác suất không chính xác. Ví dụ, nếu mô hình nói “90% chắc chắn” nhưng thực tế chỉ đúng 70%, thì mô hình chưa được calibrate.
+
+Ý tưởng toán học: Các kỹ thuật phổ biến: Platt Scaling (dùng Logistic Regression để điều chỉnh xác suất), Isotonic Regression. Đánh giá bằng biểu đồ reliability hoặc Expected Calibration Error (ECE).
+
+Ưu điểm: Giúp mô hình đáng tin cậy hơn. Quan trọng trong các ứng dụng cần xác suất chính xác. Dễ triển khai với mô hình đã huấn luyện.
+
+Hạn chế: Cần dữ liệu validation riêng. Có thể làm giảm độ chính xác phân loại. Không giải quyết vấn đề overfitting.
+
+Ứng dụng: Dự đoán y tế, tài chính, hệ thống khuyến nghị. Calibration quan trọng khi quyết định dựa trên xác suất.
+
+Liên hệ: Model Calibration liên quan đến Logistic Regression (Platt Scaling), Train/Validation/Test Split (cần dữ liệu để calibrate), và Cross-validation (đánh giá calibration).

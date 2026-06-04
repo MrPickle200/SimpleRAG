@@ -1,0 +1,13 @@
+Support Vector Machine (SVM) là một thuật toán phân loại mạnh mẽ trong Machine Learning. Ý tưởng chính là tìm siêu phẳng (hyperplane) tối ưu để phân tách dữ liệu thành các lớp.
+
+Trực giác cốt lõi: SVM cố gắng tìm đường biên có khoảng cách lớn nhất đến các điểm dữ liệu gần nhất của mỗi lớp. Khoảng cách này gọi là margin. Một margin lớn giúp mô hình tổng quát hóa tốt hơn.
+
+Ý tưởng toán học: Với dữ liệu tuyến tính, SVM tìm siêu phẳng 𝑤𝑇𝑥 + 𝑏 = 0, sao cho margin tối đa. Với dữ liệu phi tuyến, SVM dùng kernel trick để ánh xạ dữ liệu sang không gian cao hơn, nơi có thể phân tách tuyến tính.
+
+Ưu điểm: Hiệu quả với dữ liệu tuyến tính và phi tuyến. Có thể xử lý dữ liệu có số chiều cao. Kernel trick rất linh hoạt.
+
+Hạn chế: Tốn thời gian với dữ liệu lớn. Khó chọn kernel phù hợp. Không cho kết quả xác suất trực tiếp.
+
+Ứng dụng: Phân loại văn bản, nhận dạng hình ảnh, phát hiện gian lận. SVM từng là thuật toán hàng đầu trước khi Deep Learning phổ biến.
+
+Liên hệ: SVM liên quan đến Logistic Regression (cùng phân loại nhị phân), Gradient Descent (tối ưu hàm mất mát), và Regularization (kiểm soát margin).

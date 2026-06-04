@@ -1,0 +1,13 @@
+K-Nearest Neighbors (KNN) là một thuật toán phân loại và hồi quy dựa trên khoảng cách. Ý tưởng chính là dự đoán nhãn của một điểm dựa trên nhãn của k điểm gần nhất trong tập huấn luyện.
+
+Trực giác cốt lõi: Nếu một điểm dữ liệu giống với nhiều điểm thuộc cùng một lớp, thì khả năng cao nó cũng thuộc lớp đó. KNN không xây dựng mô hình rõ ràng mà dựa trực tiếp vào dữ liệu.
+
+Ý tưởng toán học: Khoảng cách phổ biến là Euclidean. Với phân loại, nhãn được quyết định bằng đa số trong k láng giềng. Với hồi quy, giá trị dự đoán là trung bình của k láng giềng.
+
+Ưu điểm: Đơn giản, dễ hiểu. Không cần huấn luyện phức tạp. Hiệu quả với dữ liệu nhỏ.
+
+Hạn chế: Tốn thời gian khi dữ liệu lớn. Nhạy cảm với lựa chọn k và khoảng cách. Không hoạt động tốt khi số chiều cao (curse of dimensionality).
+
+Ứng dụng: Nhận dạng chữ viết tay, phân loại hình ảnh, hệ thống gợi ý. KNN thường dùng như baseline.
+
+Liên hệ: KNN liên quan đến Distance Metrics, Underfitting/Overfitting (chọn k ảnh hưởng), và PCA (giảm chiều giúp KNN hiệu quả hơn).

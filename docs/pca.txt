@@ -1,0 +1,13 @@
+Principal Component Analysis (PCA) là một kỹ thuật giảm chiều dữ liệu. Ý tưởng chính là tìm các hướng (principal components) mà dữ liệu có phương sai lớn nhất, từ đó biểu diễn dữ liệu trong không gian nhỏ hơn.
+
+Trực giác cốt lõi: Nếu dữ liệu có nhiều đặc trưng, nhiều đặc trưng có thể dư thừa. PCA tìm các trục mới sao cho giữ lại nhiều thông tin nhất. Điều này giúp giảm nhiễu và tăng hiệu quả tính toán.
+
+Ý tưởng toán học: PCA tính ma trận hiệp phương sai, sau đó tìm eigenvectors và eigenvalues. Các eigenvectors tương ứng với các hướng chính. Dữ liệu được chiếu lên các trục này để giảm chiều.
+
+Ưu điểm: Giảm chiều dữ liệu, loại bỏ nhiễu. Giúp trực quan hóa dữ liệu. Tăng tốc độ huấn luyện.
+
+Hạn chế: Khó giải thích ý nghĩa của các thành phần chính. Có thể mất thông tin quan trọng. Chỉ hiệu quả với dữ liệu tuyến tính.
+
+Ứng dụng: Tiền xử lý dữ liệu trước Logistic Regression, SVM, KNN. Trực quan hóa dữ liệu nhiều chiều. Nén dữ liệu hình ảnh.
+
+Liên hệ: PCA liên quan đến SVD (cách tính toán), Logistic Regression (giảm chiều trước khi huấn luyện), và KNN (giảm chiều để tránh curse of dimensionality).

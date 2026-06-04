@@ -1,0 +1,16 @@
+Linear Regression là một trong những thuật toán cơ bản và quan trọng nhất trong Machine Learning. Nó được dùng để mô hình hóa mối quan hệ tuyến tính giữa biến đầu vào (features) và biến đầu ra (target). Ý tưởng chính là tìm một đường thẳng (hoặc siêu phẳng trong không gian nhiều chiều) sao cho dự đoán gần nhất với dữ liệu thực tế.
+
+Trực giác cốt lõi: Linear Regression giả định rằng đầu ra có thể được biểu diễn như một tổ hợp tuyến tính của các đặc trưng đầu vào. Ví dụ, giá nhà có thể phụ thuộc tuyến tính vào diện tích và số phòng ngủ. Khi vẽ dữ liệu trên đồ thị, ta cố gắng tìm đường thẳng “phù hợp nhất” đi qua các điểm.
+
+Ý tưởng toán học: Mô hình có dạng 
+	𝑦=𝑤0+𝑤1𝑥1+𝑤2𝑥2+...+𝑤𝑛𝑥𝑛. 
+
+Các tham số 𝑤 được ước lượng bằng cách tối thiểu hóa hàm mất mát, thường là Mean Squared Error (MSE). Giải pháp có thể tìm bằng công thức đóng (Normal Equation) hoặc bằng các thuật toán tối ưu như Gradient Descent.
+
+Ưu điểm: Đơn giản, dễ hiểu, dễ triển khai. Có thể giải thích rõ ràng ý nghĩa của từng hệ số. Hiệu quả với dữ liệu có quan hệ tuyến tính.
+
+Hạn chế: Không phù hợp khi dữ liệu có quan hệ phi tuyến. Dễ bị ảnh hưởng bởi outliers. Nếu số chiều lớn, mô hình có thể trở nên không ổn định.
+
+Ứng dụng: Dự đoán giá nhà, dự đoán doanh thu, phân tích xu hướng. Linear Regression thường được dùng như baseline để so sánh với các mô hình phức tạp hơn.
+
+Liên hệ: Linear Regression liên quan chặt chẽ đến Logistic Regression (dùng cho phân loại), Gradient Descent (phương pháp tối ưu), và Regularization (giúp tránh overfitting khi số chiều lớn).

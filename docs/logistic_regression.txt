@@ -1,0 +1,16 @@
+Logistic Regression là một thuật toán phân loại nhị phân phổ biến. Mặc dù tên gọi là “regression”, nó thực chất được dùng để dự đoán xác suất một mẫu thuộc về một lớp nhất định. Trực giác chính là ánh xạ đầu ra tuyến tính sang một xác suất thông qua hàm sigmoid.
+
+Trực giác cốt lõi: Logistic Regression giả định rằng log-odds của xác suất thuộc về lớp 1 là tuyến tính theo các đặc trưng đầu vào. Hàm sigmoid đảm bảo đầu ra nằm trong khoảng (0,1), phù hợp với xác suất.
+
+Ý tưởng toán học: Mô hình có dạng 
+	𝑝(𝑦=1∣𝑥)=𝜎(𝑤0+𝑤1𝑥1+...+𝑤𝑛𝑥𝑛), với 𝜎(𝑧)=1/(1+𝑒−𝑧). 
+
+Hàm mất mát thường dùng là log-loss (cross-entropy). Các tham số được tối ưu bằng Gradient Descent hoặc các biến thể.
+
+Ưu điểm: Đơn giản, dễ giải thích. Cho kết quả xác suất, hữu ích trong nhiều ứng dụng. Hiệu quả với dữ liệu tuyến tính.
+
+Hạn chế: Không xử lý tốt dữ liệu phi tuyến phức tạp. Dễ bị ảnh hưởng bởi multicollinearity. Cần nhiều dữ liệu để ước lượng chính xác.
+
+Ứng dụng: Phân loại email spam, dự đoán bệnh có/không, phân loại khách hàng. Logistic Regression thường là lựa chọn đầu tiên trong các bài toán phân loại.
+
+Liên hệ: Logistic Regression liên quan đến Linear Regression (cùng ý tưởng tuyến tính nhưng khác hàm ánh xạ), Gradient Descent (tối ưu tham số), và Regularization (giúp cải thiện hiệu suất).

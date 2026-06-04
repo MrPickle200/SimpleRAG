@@ -1,0 +1,13 @@
+Boosting là một kỹ thuật ensemble trong Machine Learning nhằm kết hợp nhiều mô hình yếu để tạo thành một mô hình mạnh. Ý tưởng chính là huấn luyện các mô hình tuần tự, mỗi mô hình mới tập trung vào những điểm dữ liệu mà mô hình trước đó dự đoán sai.
+
+Trực giác cốt lõi: Nếu một mô hình đơn giản chỉ dự đoán đúng một phần dữ liệu, ta có thể cải thiện bằng cách thêm nhiều mô hình khác nhau, mỗi mô hình học từ lỗi của mô hình trước. Khi kết hợp lại, kết quả tổng thể sẽ chính xác hơn.
+
+Ý tưởng toán học: Boosting gán trọng số cao hơn cho các mẫu bị dự đoán sai. Ví dụ, trong AdaBoost, trọng số của mẫu sai tăng lên, buộc mô hình tiếp theo chú ý nhiều hơn. Kết quả cuối cùng là sự kết hợp có trọng số của nhiều mô hình yếu.
+
+Ưu điểm: Tăng độ chính xác đáng kể. Hoạt động tốt với nhiều loại dữ liệu. Giảm bias của mô hình.
+
+Hạn chế: Dễ overfit nếu số vòng lặp quá nhiều. Tốn thời gian tính toán. Khó giải thích hơn so với một mô hình đơn lẻ.
+
+Ứng dụng: Phân loại văn bản, phát hiện gian lận, dự đoán y tế. Boosting là nền tảng của các thuật toán mạnh như XGBoost, LightGBM.
+
+Liên hệ: Boosting liên quan đến Decision Tree (thường dùng làm mô hình yếu), Random Forest (ensemble khác dựa trên bagging), và Overfitting (cần kiểm soát số vòng lặp).

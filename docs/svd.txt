@@ -1,0 +1,14 @@
+Singular Value Decomposition (SVD) là một kỹ thuật toán học quan trọng trong xử lý dữ liệu và Machine Learning. Ý tưởng chính là phân rã một ma trận thành ba ma trận nhỏ hơn, giúp ta hiểu cấu trúc dữ liệu và thực hiện các tác vụ như giảm chiều hoặc nén dữ liệu.
+
+Trực giác cốt lõi: SVD giống như việc “tách” dữ liệu thành các thành phần cơ bản. Nó cho ta biết hướng chính của dữ liệu và mức độ quan trọng của từng hướng. Điều này giúp loại bỏ nhiễu và tập trung vào thông tin quan trọng.
+
+Ý tưởng toán học: Với ma trận 𝐴, SVD phân rã thành 
+𝐴=𝑈Σ𝑉𝑇. Trong đó, 𝑈 và 𝑉 là ma trận trực giao, Σ là ma trận đường chéo chứa các singular values. Các singular values cho biết mức độ quan trọng của từng thành phần.
+
+Ưu điểm: Giúp giảm chiều dữ liệu, nén thông tin. Ổn định về mặt toán học. Có nhiều ứng dụng trong xử lý tín hiệu và NLP.
+
+Hạn chế: Tốn thời gian tính toán với dữ liệu lớn. Khó giải thích trực quan. Có thể mất thông tin khi bỏ đi các singular values nhỏ.
+
+Ứng dụng: Nén ảnh, phân tích văn bản (LSA), giảm chiều dữ liệu. SVD thường được dùng để tính PCA.
+
+Liên hệ: SVD liên quan trực tiếp đến PCA (cách tính toán), Neural Networks (giảm chiều embedding), và Regularization (giúp ổn định mô hình).

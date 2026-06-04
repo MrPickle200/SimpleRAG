@@ -1,0 +1,15 @@
+Gradient Descent là một thuật toán tối ưu quan trọng trong Machine Learning. Nó được dùng để tìm giá trị tham số tối ưu bằng cách di chuyển dần theo hướng giảm của gradient. Trực giác là “leo xuống dốc” của hàm mất mát cho đến khi đạt điểm thấp nhất.
+
+Trực giác cốt lõi: Nếu coi hàm mất mát như một bề mặt, gradient cho biết hướng dốc nhất. Gradient Descent cập nhật tham số theo hướng ngược lại gradient để giảm giá trị hàm mất mát.
+
+Ý tưởng toán học: Cập nhật tham số theo công thức 
+	𝑤:=𝑤−𝜂∇𝐿(𝑤), 
+với 𝜂 là learning rate. Có nhiều biến thể: Batch Gradient Descent, Stochastic Gradient Descent (SGD), Mini-batch Gradient Descent.
+
+Ưu điểm: Đơn giản, hiệu quả với nhiều loại mô hình. Có thể áp dụng cho dữ liệu lớn. Dễ mở rộng với các biến thể.
+
+Hạn chế: Nhạy cảm với learning rate. Có thể mắc kẹt ở local minima hoặc saddle points. Tốc độ hội tụ phụ thuộc vào dữ liệu và hàm mất mát.
+
+Ứng dụng: Tối ưu Linear Regression, Logistic Regression, Neural Networks. Gradient Descent là nền tảng của hầu hết các thuật toán học sâu.
+
+Liên hệ: Gradient Descent liên quan đến Backpropagation (tối ưu mạng neural), Regularization (giúp ổn định quá trình tối ưu), và các mô hình như SVM, Logistic Regression.

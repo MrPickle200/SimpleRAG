@@ -1,0 +1,13 @@
+Overfitting là hiện tượng mô hình học quá chi tiết từ dữ liệu huấn luyện, bao gồm cả nhiễu, dẫn đến hiệu suất kém trên dữ liệu mới. Đây là một vấn đề phổ biến trong Machine Learning.
+
+Trực giác cốt lõi: Khi mô hình quá phức tạp, nó có thể “nhớ” dữ liệu huấn luyện thay vì học quy luật tổng quát. Kết quả là mô hình dự đoán tốt trên tập huấn luyện nhưng sai nhiều trên tập kiểm tra.
+
+Ý tưởng toán học: Overfitting xảy ra khi sai số huấn luyện giảm nhưng sai số kiểm tra tăng. Nó thường liên quan đến việc số tham số quá lớn so với dữ liệu, hoặc mô hình không có cơ chế kiểm soát độ phức tạp.
+
+Ưu điểm: Không có ưu điểm thực sự, nhưng việc nhận diện overfitting giúp cải thiện mô hình.
+
+Hạn chế: Làm giảm khả năng tổng quát hóa. Mô hình trở nên không đáng tin cậy khi áp dụng thực tế.
+
+Ứng dụng: Hiểu về overfitting giúp thiết kế mô hình tốt hơn. Ví dụ, trong Neural Networks, overfitting có thể được giảm bằng dropout hoặc regularization.
+
+Liên hệ: Overfitting liên quan đến Underfitting (trường hợp ngược lại), Regularization (giúp giảm overfitting), Cross-validation (giúp phát hiện overfitting), và Train/Validation/Test Split.

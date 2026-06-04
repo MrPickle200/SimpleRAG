@@ -1,0 +1,14 @@
+Activation Functions là các hàm phi tuyến được dùng trong Neural Networks để quyết định đầu ra của mỗi neuron. Chúng giúp mạng học các quan hệ phi tuyến phức tạp.
+
+Trực giác cốt lõi: Nếu không có activation function, Neural Network chỉ là một mô hình tuyến tính. Activation function thêm phi tuyến, cho phép mạng học các mẫu phức tạp.
+
+Ý tưởng toán học: Một số hàm phổ biến: 
+Sigmoid 𝜎(𝑧)=1/(1+𝑒−𝑧), Tanh, ReLU 𝑓(𝑧)=max⁡(0,𝑧). Mỗi hàm có đặc điểm riêng về gradient và khả năng học.
+
+Ưu điểm: Cho phép học phi tuyến. ReLU đơn giản và hiệu quả. Sigmoid và Tanh cho đầu ra trong khoảng xác định.
+
+Hạn chế: Sigmoid dễ gây vanishing gradient. ReLU có thể gây dead neurons. Cần chọn hàm phù hợp cho từng bài toán.
+
+Ứng dụng: Neural Networks trong hình ảnh, NLP, âm thanh. Activation Functions là thành phần không thể thiếu.
+
+Liên hệ: Activation Functions liên quan đến Neural Networks (thành phần cơ bản), Backpropagation (ảnh hưởng gradient), Logistic Regression (dùng sigmoid), và Overfitting (chọn hàm phù hợp giúp ổn định).

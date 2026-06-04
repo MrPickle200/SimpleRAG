@@ -1,0 +1,13 @@
+Decision Tree là một mô hình phân loại và hồi quy dựa trên cấu trúc cây. Ý tưởng chính là chia dữ liệu thành các nhánh dựa trên điều kiện, cho đến khi đạt được dự đoán.
+
+Trực giác cốt lõi: Decision Tree giống như một chuỗi câu hỏi “có/không”. Ví dụ, để phân loại động vật: “Có lông không?”, “Biết bay không?”. Mỗi câu hỏi chia dữ liệu thành nhóm nhỏ hơn.
+
+Ý tưởng toán học: Decision Tree chọn đặc trưng để chia bằng cách tối đa hóa độ thuần khiết (purity). Các chỉ số phổ biến: Gini Index, Entropy. Quá trình tiếp tục cho đến khi đạt độ sâu hoặc điều kiện dừng.
+
+Ưu điểm: Dễ hiểu, dễ trực quan hóa. Có thể xử lý dữ liệu phi tuyến. Không cần chuẩn hóa dữ liệu.
+
+Hạn chế: Dễ overfit nếu cây quá sâu. Nhạy cảm với dữ liệu nhiễu. Không ổn định: thay đổi nhỏ trong dữ liệu có thể tạo cây khác.
+
+Ứng dụng: Phân loại khách hàng, dự đoán rủi ro tín dụng, phân tích y tế. Decision Tree thường là nền tảng cho các mô hình ensemble.
+
+Liên hệ: Liên quan đến Random Forest (tập hợp nhiều cây), Boosting (kết hợp cây yếu), Overfitting (cây sâu dễ overfit).

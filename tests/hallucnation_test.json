@@ -1,0 +1,82 @@
+[
+{
+"question": "Reinforcement Learning là gì?",
+"expected_behavior": "insufficient_information"
+},
+{
+"question": "Q-Learning hoạt động như thế nào?",
+"expected_behavior": "insufficient_information"
+},
+{
+"question": "Transformers được sử dụng trong NLP ra sao?",
+"expected_behavior": "insufficient_information"
+},
+{
+"question": "Diffusion Models thường áp dụng trong lĩnh vực nào?",
+"expected_behavior": "insufficient_information"
+},
+{
+"question": "Large Language Models khác gì so với Neural Networks truyền thống?",
+"expected_behavior": "insufficient_information"
+},
+{
+"question": "GANs (Generative Adversarial Networks) hoạt động thế nào?",
+"expected_behavior": "insufficient_information"
+},
+{
+"question": "Attention Mechanism có vai trò gì trong Machine Learning?",
+"expected_behavior": "insufficient_information"
+},
+{
+"question": "BERT là gì?",
+"expected_behavior": "insufficient_information"
+},
+{
+"question": "GPT hoạt động như thế nào?",
+"expected_behavior": "insufficient_information"
+},
+{
+"question": "AlphaGo sử dụng kỹ thuật nào để chơi cờ vây?",
+"expected_behavior": "insufficient_information"
+},
+{
+"question": "Deep Reinforcement Learning khác gì so với Reinforcement Learning cơ bản?",
+"expected_behavior": "insufficient_information"
+},
+{
+"question": "Transformer Encoder và Decoder khác nhau thế nào?",
+"expected_behavior": "insufficient_information"
+},
+{
+"question": "Self-supervised Learning là gì?",
+"expected_behavior": "insufficient_information"
+},
+{
+"question": "Contrastive Learning được áp dụng trong trường hợp nào?",
+"expected_behavior": "insufficient_information"
+},
+{
+"question": "Diffusion Probabilistic Models có đặc điểm gì?",
+"expected_behavior": "insufficient_information"
+},
+{
+"question": "RLHF (Reinforcement Learning from Human Feedback) là gì?",
+"expected_behavior": "insufficient_information"
+},
+{
+"question": "Masked Language Modeling hoạt động như thế nào?",
+"expected_behavior": "insufficient_information"
+},
+{
+"question": "Zero-shot Learning là gì?",
+"expected_behavior": "insufficient_information"
+},
+{
+"question": "Few-shot Learning khác gì Zero-shot Learning?",
+"expected_behavior": "insufficient_information"
+},
+{
+"question": "Transformers có ưu điểm gì so với RNN?",
+"expected_behavior": "insufficient_information"
+}
+]

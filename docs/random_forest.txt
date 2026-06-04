@@ -1,0 +1,13 @@
+Random Forest là một mô hình ensemble dựa trên nhiều Decision Trees. Ý tưởng chính là kết hợp nhiều cây để giảm overfitting và tăng độ chính xác.
+
+Trực giác cốt lõi: Một Decision Tree đơn lẻ dễ overfit. Nhưng nếu ta tạo nhiều cây trên các mẫu dữ liệu khác nhau và kết hợp kết quả, ta có mô hình mạnh mẽ hơn. Đây là ý tưởng của bagging (Bootstrap Aggregating).
+
+Ý tưởng toán học: Random Forest tạo nhiều Decision Trees bằng cách lấy mẫu bootstrap từ dữ liệu và chọn ngẫu nhiên đặc trưng tại mỗi nút. Kết quả cuối cùng là trung bình (cho hồi quy) hoặc bỏ phiếu đa số (cho phân loại).
+
+Ưu điểm: Giảm overfitting. Độ chính xác cao. Hoạt động tốt với dữ liệu lớn và nhiều đặc trưng.
+
+Hạn chế: Ít trực quan hơn Decision Tree. Tốn tài nguyên tính toán. Khó giải thích chi tiết.
+
+Ứng dụng: Phân loại văn bản, dự đoán y tế, phát hiện gian lận. Random Forest là một trong những thuật toán phổ biến nhất.
+
+Liên hệ: Liên quan đến Decision Tree (thành phần cơ bản), Bagging (ý tưởng chính), Boosting (phương pháp ensemble khác), và Overfitting (giảm thiểu bằng nhiều cây).

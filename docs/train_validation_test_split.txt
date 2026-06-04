@@ -1,0 +1,13 @@
+Train/Validation/Test Split là một quy trình cơ bản trong Machine Learning để đánh giá mô hình. Ý tưởng là chia dữ liệu thành ba phần: huấn luyện, xác thực, và kiểm tra.
+
+Trực giác cốt lõi: Nếu chỉ huấn luyện và kiểm tra trên cùng một tập dữ liệu, ta không thể biết mô hình có tổng quát hóa tốt không. Do đó, cần tách dữ liệu để đánh giá khách quan.
+
+Ý tưởng toán học: Giả sử có N mẫu. Ta chia thành: tập huấn luyện (train) để học tham số, tập xác thực (validation) để chọn siêu tham số, và tập kiểm tra (test) để đánh giá cuối cùng. Tỉ lệ phổ biến là 60-20-20 hoặc 70-15-15.
+
+Ưu điểm: Giúp phát hiện overfitting. Cho phép chọn siêu tham số tối ưu. Đảm bảo đánh giá công bằng.
+
+Hạn chế: Nếu dữ liệu ít, việc chia nhỏ có thể làm giảm hiệu quả huấn luyện. Cần kỹ thuật bổ sung như cross-validation.
+
+Ứng dụng: Hầu hết các bài toán Machine Learning. Đặc biệt quan trọng trong các mô hình phức tạp như Neural Networks.
+
+Liên hệ: Liên quan đến Cross-validation (cách chia dữ liệu nâng cao), Overfitting (phát hiện qua validation/test), và Regularization (chọn siêu tham số).

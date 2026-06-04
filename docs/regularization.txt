@@ -1,0 +1,13 @@
+Regularization là một kỹ thuật quan trọng trong Machine Learning nhằm giảm overfitting và cải thiện khả năng tổng quát hóa của mô hình. Ý tưởng chính là thêm một thành phần phạt vào hàm mất mát để hạn chế độ phức tạp của mô hình.
+
+Trực giác cốt lõi: Nếu mô hình có quá nhiều tham số hoặc hệ số lớn, nó dễ học cả nhiễu trong dữ liệu. Regularization ép các hệ số về nhỏ hơn hoặc thậm chí bằng 0, giúp mô hình đơn giản hơn và ổn định hơn.
+
+Ý tưởng toán học: Hai dạng phổ biến là L1 (Lasso) và L2 (Ridge). Với L2, ta thêm 𝜆∑𝑤i^2 vào hàm mất mát. Với L1, ta thêm 𝜆∑∣𝑤𝑖∣. Tham số 𝜆 điều chỉnh mức độ regularization.
+
+Ưu điểm: Giúp giảm overfitting, cải thiện khả năng tổng quát hóa. L1 có thể chọn đặc trưng tự động bằng cách đưa hệ số về 0. L2 giúp ổn định mô hình.
+
+Hạn chế: Nếu chọn 𝜆 quá lớn, mô hình có thể underfit. Cần điều chỉnh cẩn thận bằng cross-validation.
+
+Ứng dụng: Linear Regression, Logistic Regression, Neural Networks. Regularization là thành phần mặc định trong nhiều thuật toán hiện đại.
+
+Liên hệ: Regularization liên quan đến Overfitting, Underfitting, Cross-validation (chọn 𝜆), và Gradient Descent (tối ưu hàm mất mát có thêm thành phần phạt).
