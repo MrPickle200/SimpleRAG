@@ -39,6 +39,12 @@ def generate_prompt(question : str, retrieval_result : list):
 def encode_question(model, question : str):
     return model.encode(f"querry: {question}")
 
+def get_prompt(question: str, model):
+    input_embed = encode_question(model, question)
+    retrieval_result = retrieval(input_embed, "embeds\mul_e5_base_embedding.npy")
+    prompt = generate_prompt(question, retrieval_result)
+    return prompt        
+
 def main():
     API_KEY = os.getenv("GEMINI")
     client = genai.Client(api_key = API_KEY)
@@ -52,9 +58,7 @@ def main():
             break
 
         start = time.time()
-        input_embed = encode_question(model, question)
-        retrieval_result = retrieval(input_embed, "embeds\mul_e5_base_embedding.npy")
-        prompt = generate_prompt(question, retrieval_result)
+        prompt = get_prompt(question, model)
         response = client.models.generate_content(
             model="gemini-3.1-flash-lite",
             contents=prompt,

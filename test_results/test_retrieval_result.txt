@@ -1,0 +1,5 @@
+Mean hit@1: 1.0000
+Mean hit@3: 1.0000
+Mean recall@1: 0.7091
+Mean recall@3: 0.9500
+Mean recall@5: 0.9818

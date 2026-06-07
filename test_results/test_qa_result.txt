@@ -1,0 +1,34 @@
+Total correct test: 106/110
+
+Top 5 failed test
+{
+  'id': 47, 
+  'question': 'Stochastic Gradient Descent khác gì Batch Gradient Descent?', 
+  'ground_truth_answer': 'Stochastic Gradient Descent cập nhật tham số sau mỗi mẫu, trong khi Batch Gradient Descent cập nhật sau khi tính gradient trên toàn bộ dữ liệu.', 
+  'relevant_documents': ['gradient_descent.txt'], 
+  'prediction': 'Dựa trên tài liệu được cung cấp, Stochastic Gradient Descent (SGD) và Batch Gradient Descent đều là các biến thể của thuật toán Gradient Descent dùng để tối ưu hóa tham số. Tuy nhiên, thông tin trong tài liệu chỉ liệt kê chúng là các biến thể của Gradient Descent chứ không cung cấp sự so sánh chi tiết về cách thức hoạt động hay sự khác biệt cụ thể giữa hai phương pháp này.\n\nTôi không tìm thấy thông tin chi tiết về sự khác biệt giữa Stochastic Gradient Descent và Batch Gradient Descent trong tài liệu.'
+}
+
+{
+  'id': 98, 
+  'question': 'Naive Bayes và Model Calibration có thể kết hợp không?', 
+  'ground_truth_answer': 'Có, Naive Bayes thường cho xác suất không chính xác. Model Calibration như Platt Scaling hoặc Isotonic Regression có thể điều chỉnh để xác suất phản ánh đúng thực tế.', 
+  'relevant_documents': ['naive_bayes.txt', 'model_calibration.txt'], 
+  'prediction': 'Tôi không tìm thấy thông tin trong tài liệu.'
+}
+
+{
+  'id': 103, 
+  'question': 'Naive Bayes và Logistic Regression có thể được dùng cùng nhau không?', 
+  'ground_truth_answer': 'Có, Naive Bayes có thể dùng như baseline nhanh, trong khi Logistic Regression cho kết quả xác suất chính xác hơn. Kết hợp cả hai giúp so sánh và chọn mô hình phù hợp với dữ liệu.', 
+  'relevant_documents': ['naive_bayes.txt', 'logistic_regression.txt'], 
+  'prediction': 'Dựa trên các tài liệu được cung cấp, không có thông tin nào cho biết Naive Bayes và Logistic Regression được sử dụng cùng nhau hoặc kết hợp trực tiếp trong một quy trình.\n\nCác tài liệu chỉ đề cập đến mối liên hệ của chúng với các thuật toán khác như sau:\n- Logistic Regression có liên quan đến Linear Regression (cùng ý tưởng tuyến tính), Gradient Descent (tối ưu tham số), Regularization (cải thiện hiệu suất) và PCA (thường được dùng để tiền xử lý dữ liệu trước khi huấn luyện Logistic Regression).\n- Naive Bayes liên quan đến Logistic Regression ở điểm cả hai đều là các thuật toán phân loại, cùng với KNN (cũng được dùng trong phân loại văn bản).\n\nTóm lại, tôi không tìm thấy thông tin khẳng định Naive Bayes và Logistic Regression có thể được dùng cùng nhau.'
+}
+
+{
+  'id': 110, 
+  'question': 'Neural Network và Model Calibration phối hợp thế nào?', 
+  'ground_truth_answer': 'Neural Network thường cho xác suất không chính xác. Model Calibration như Platt Scaling hoặc Isotonic Regression có thể điều chỉnh để xác suất phản ánh đúng thực tế, đặc biệt quan trọng trong các ứng dụng y tế hoặc tài chính.', 
+  'relevant_documents': ['neural_network.txt', 'model_calibration.txt', 'logistic_regression.txt'], 
+  'prediction': 'Tôi không tìm thấy thông tin trong tài liệu.'
+}
