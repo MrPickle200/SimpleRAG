@@ -31,6 +31,7 @@ with open("./tests\evaluation.json", "r", encoding="utf-8") as file:
 print("Load test question successfully.")
 
 if choice == "0":
+    model_name = "gemini-embedding-001"
     load_dotenv()
     api_key = os.getenv("GEMINI")
     client = genai.Client(api_key=api_key)
@@ -62,22 +63,9 @@ if choice == "0":
                 "actual_relevant" : list(target_relevant_docs)
             }
             false_retrieval.append(data)
-    print("Done")
-
-    print(f"Mean hit@1: {(hit_1 / len(test)):.4f}")
-    print(f"Mean hit@3: {(hit_3 / len(test)):.4f}")
-    print(f"Mean recall@1: {(recall_1 / len(test)):.4f}")
-    print(f"Mean recall@3: {(recall_3 / len(test)):.4f}")
-    print(f"Mean recall@5: {(recall_5 / len(test)):.4f}")
-    if len(false_retrieval) >= 5:
-        print(f"Top 5 false retrival:")
-        for i in range(len(false_retrieval)):
-            print(false_retrieval[i])
-            print()
-            if i >= 4:
-                break
 
 elif choice == "1":
+    model_name = "multilingual-e5-base"
     client = SentenceTransformer("intfloat/multilingual-e5-base")
 
     print("Retrieving...")
@@ -102,22 +90,9 @@ elif choice == "1":
                 "actual_relevant" : list(target_relevant_docs)
             }
             false_retrieval.append(data)
-    print("Done")
-
-    print(f"Mean hit@1: {(hit_1 / len(test)):.4f}")
-    print(f"Mean hit@3: {(hit_3 / len(test)):.4f}")
-    print(f"Mean recall@1: {(recall_1 / len(test)):.4f}")
-    print(f"Mean recall@3: {(recall_3 / len(test)):.4f}")
-    print(f"Mean recall@5: {(recall_5 / len(test)):.4f}")
-    if len(false_retrieval) >= 5:
-        print(f"Top 5 false retrival:")
-        for i in range(len(false_retrieval)):
-            print(false_retrieval[i])
-            print()
-            if i >= 4:
-                break
 
 elif choice == "2":
+    model_name = "multilingual-e5-large"
     client = SentenceTransformer("intfloat/multilingual-e5-large")
 
     print("Retrieving...")
@@ -142,17 +117,28 @@ elif choice == "2":
                 "actual_relevant" : list(target_relevant_docs)
             }
             false_retrieval.append(data)
-    print("Done")
+    
 
-    print(f"Mean hit@1: {(hit_1 / len(test)):.4f}")
-    print(f"Mean hit@3: {(hit_3 / len(test)):.4f}")
-    print(f"Mean recall@1: {(recall_1 / len(test)):.4f}")
-    print(f"Mean recall@3: {(recall_3 / len(test)):.4f}")
-    print(f"Mean recall@5: {(recall_5 / len(test)):.4f}")
-    if len(false_retrieval) >= 5:
-        print(f"Top 5 false retrival:")
-        for i in range(len(false_retrieval)):
-            print(false_retrieval[i])
-            print()
-            if i >= 4:
-                break
+print("Done")
+
+output_lines = []
+output_lines.append(f"Model: {model_name}")
+output_lines.append(f"Mean hit@1: {(hit_1 / len(test)):.4f}")
+output_lines.append(f"Mean hit@3: {(hit_3 / len(test)):.4f}")
+output_lines.append(f"Mean recall@1: {(recall_1 / len(test)):.4f}")
+output_lines.append(f"Mean recall@3: {(recall_3 / len(test)):.4f}")
+output_lines.append(f"Mean recall@5: {(recall_5 / len(test)):.4f}")
+if len(false_retrieval) >= 5:
+    output_lines.append(f"Top 5 false retrival:")
+    for i in range(len(false_retrieval)):
+        output_lines.append(str(false_retrieval[i]))
+        output_lines.append("")
+        if i >= 4:
+            break
+
+output_content = "\n".join(output_lines)
+print(output_content)
+
+os.makedirs("test_results", exist_ok=True)
+with open("test_results/test_retrieval_result.txt", "w", encoding="utf-8") as out_file:
+    out_file.write(output_content)

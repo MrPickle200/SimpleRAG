@@ -115,17 +115,26 @@ def main():
     print()
     print("Done.")
     print()
-    print(f"Total correct test: {total_score}/{len(test)}")
-    print()
+
+    output_lines = []
+    output_lines.append(f"Total correct test: {total_score}/{len(test)}")
+    output_lines.append("")
 
     if failed_test:
-        print("Top 5 failed test")
+        output_lines.append("Top 5 failed test")
         for i, block in enumerate(failed_test):
-            print(block)
-            print()
+            output_lines.append(str(block))
+            output_lines.append("")
 
             if i >= 4:
                 break
+
+    output_content = "\n".join(output_lines)
+    print(output_content)
+
+    os.makedirs("test_results", exist_ok=True)
+    with open("test_results/test_qa_result.txt", "w", encoding="utf-8") as out_file:
+        out_file.write(output_content)
 
 if __name__ == "__main__":
     main()      

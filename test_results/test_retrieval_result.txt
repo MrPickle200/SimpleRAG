@@ -1,3 +1,4 @@
+Model: multilingual-e5-base
 Mean hit@1: 1.0000
 Mean hit@3: 1.0000
 Mean recall@1: 0.7091
