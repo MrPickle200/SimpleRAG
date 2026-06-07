@@ -9,12 +9,18 @@ def recall_k(predict : list, target : list, k = 1):
     sub_predict = predict[ : k]
     return len(set(target).intersection(set(sub_predict))) / len(set(target))
 
+def hit_k(predict : list, target : list, k = 1):
+    sub_predict = predict[ : k]
+    return int(len(set(target).intersection(set(sub_predict))) > 0)
+
 print("Choose your embedding model:")
 print("gemini-embedding-001 : press 0")
 print("multilingual-e5-base : press 1")
 print("multilingual-e5-large : press 2")
 choice = input("Enter your choice: ")
 
+hit_1 = 0
+hit_3 = 0
 recall_1 = 0
 recall_3 = 0
 recall_5 = 0
@@ -26,7 +32,7 @@ print("Load test question successfully.")
 
 if choice == "0":
     load_dotenv()
-    api_key = os.getenv("GEMINI_EMBEDDING_1")
+    api_key = os.getenv("GEMINI")
     client = genai.Client(api_key=api_key)
 
     print("Retrieving...")
@@ -42,6 +48,9 @@ if choice == "0":
         retrieval_result = retrieval(input_vector, ".\embeds\gemini_embedding.npy")
         predict_relevant_docs = [t[1] for t in retrieval_result]
         
+        hit_1 += hit_k(predict_relevant_docs, target_relevant_docs, k = 1)
+        hit_3 += hit_k(predict_relevant_docs, target_relevant_docs, k = 3)
+        
         recall_1 += recall_k(predict_relevant_docs, target_relevant_docs, k = 1)
         recall_3 += recall_k(predict_relevant_docs, target_relevant_docs, k = 3)
         recall_5 += recall_k(predict_relevant_docs, target_relevant_docs, k = 5)
@@ -55,6 +64,8 @@ if choice == "0":
             false_retrieval.append(data)
     print("Done")
 
+    print(f"Mean hit@1: {(hit_1 / len(test)):.4f}")
+    print(f"Mean hit@3: {(hit_3 / len(test)):.4f}")
     print(f"Mean recall@1: {(recall_1 / len(test)):.4f}")
     print(f"Mean recall@3: {(recall_3 / len(test)):.4f}")
     print(f"Mean recall@5: {(recall_5 / len(test)):.4f}")
@@ -77,6 +88,9 @@ elif choice == "1":
         retrieval_result = retrieval(input_vector, ".\embeds\mul_e5_base_embedding.npy")
         predict_relevant_docs = [t[1] for t in retrieval_result]
         
+        hit_1 += hit_k(predict_relevant_docs, target_relevant_docs, k = 1)
+        hit_3 += hit_k(predict_relevant_docs, target_relevant_docs, k = 3)
+                
         recall_1 += recall_k(predict_relevant_docs, target_relevant_docs, k = 1)
         recall_3 += recall_k(predict_relevant_docs, target_relevant_docs, k = 3)
         recall_5 += recall_k(predict_relevant_docs, target_relevant_docs, k = 5)
@@ -90,6 +104,8 @@ elif choice == "1":
             false_retrieval.append(data)
     print("Done")
 
+    print(f"Mean hit@1: {(hit_1 / len(test)):.4f}")
+    print(f"Mean hit@3: {(hit_3 / len(test)):.4f}")
     print(f"Mean recall@1: {(recall_1 / len(test)):.4f}")
     print(f"Mean recall@3: {(recall_3 / len(test)):.4f}")
     print(f"Mean recall@5: {(recall_5 / len(test)):.4f}")
@@ -112,6 +128,9 @@ elif choice == "2":
         retrieval_result = retrieval(input_vector, ".\embeds\mul_e5_large_embedding.npy")
         predict_relevant_docs = [t[1] for t in retrieval_result]
         
+        hit_1 += hit_k(predict_relevant_docs, target_relevant_docs, k = 1)
+        hit_3 += hit_k(predict_relevant_docs, target_relevant_docs, k = 3)
+        
         recall_1 += recall_k(predict_relevant_docs, target_relevant_docs, k = 1)
         recall_3 += recall_k(predict_relevant_docs, target_relevant_docs, k = 3)
         recall_5 += recall_k(predict_relevant_docs, target_relevant_docs, k = 5)
@@ -125,6 +144,8 @@ elif choice == "2":
             false_retrieval.append(data)
     print("Done")
 
+    print(f"Mean hit@1: {(hit_1 / len(test)):.4f}")
+    print(f"Mean hit@3: {(hit_3 / len(test)):.4f}")
     print(f"Mean recall@1: {(recall_1 / len(test)):.4f}")
     print(f"Mean recall@3: {(recall_3 / len(test)):.4f}")
     print(f"Mean recall@5: {(recall_5 / len(test)):.4f}")
@@ -135,5 +156,3 @@ elif choice == "2":
             print()
             if i >= 4:
                 break
-
-# TODO: Calculate recall@k: is the target document in the list retrieved

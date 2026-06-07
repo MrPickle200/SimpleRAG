@@ -40,7 +40,7 @@ def main():
     choice = input("Enter your choice: ")
 
     if choice == "0":
-        api_key = os.getenv("GEMINI_EMBEDDING_1")
+        api_key = os.getenv("GEMINI")
         user_input = input("Enter your question: ")
         
         print("Embedding your question...")

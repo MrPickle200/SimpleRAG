@@ -14,7 +14,7 @@ print("multilingual-e5-large : press 2")
 choice = input("Enter your choice: ")
 
 if choice == "0":
-    API_KEY = os.getenv("GEMINI_EMBEDDING_1")
+    API_KEY = os.getenv("GEMINI")
     client = genai.Client(api_key = API_KEY)
     print("Load model successfully.")
     len_docs = len(os.listdir("./docs")) - 1
