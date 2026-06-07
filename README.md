@@ -16,6 +16,8 @@ Hệ thống cho phép người dùng hỏi đáp trực tiếp với nguồn t�
 - **Bộ công cụ đánh giá (Evaluation)**:
   - Đánh giá giai đoạn truy xuất: Tính toán các chỉ số `Hit@K` (1, 3) và `Recall@K` (1, 3, 5).
   - Đánh giá giai đoạn sinh: Sử dụng LLM làm giám khảo (`gemini-3.1-flash-lite` hoặc `gemini-2.5-flash`) để đối chiếu câu trả lời tự động với nhãn chuẩn (Ground Truth).
+  - Đánh giá khả năng chống ảo tưởng (Hallucination): Kiểm thử khả năng từ chối trả lời của mô hình khi gặp câu hỏi ngoài Context tài liệu.
+  - Lưu trữ kết quả kiểm thử: Tự động kết xuất báo cáo kiểm thử ra các file log tương ứng trong thư mục `test_results/`.
 
 ---
 
@@ -26,7 +28,12 @@ SimpleRAG/
 ├── docs/                     # Kho tài liệu học máy dạng text (.txt)
 ├── embeds/                   # Lưu trữ file vector nhúng (.npy) sau khi chạy
 ├── tests/
-│   └── evaluation.json       # Tập dữ liệu câu hỏi, nhãn chuẩn và tài liệu liên quan để đánh giá
+│   ├── evaluation.json       # Tập dữ liệu câu hỏi, nhãn chuẩn và tài liệu liên quan để đánh giá QA
+│   └── hallucnation_test.json # Tập dữ liệu câu hỏi ngoài lề để đánh giá khả năng chống ảo tưởng
+├── test_results/             # Thư mục lưu kết quả chạy kiểm thử (tự động tạo)
+│   ├── test_retrieval_result.txt
+│   ├── test_qa_result.txt
+│   └── test_hallucination_result.txt
 ├── .env                      # File cấu hình khóa API
 ├── .gitignore
 ├── requirements.txt          # Các thư viện Python cần thiết
@@ -34,7 +41,8 @@ SimpleRAG/
 ├── retrieval.py              # Script tìm kiếm tài liệu tương tự từ câu hỏi
 ├── chatbot.py                # Giao diện dòng lệnh (CLI) hỏi đáp với Chatbot
 ├── test_retrieval.py         # Kiểm thử và đo lường chất lượng truy xuất
-└── test_qa.py                # Đánh giá chất lượng trả lời tự động bằng LLM Judge
+├── test_qa.py                # Đánh giá chất lượng trả lời tự động bằng LLM Judge
+└── test_hallucination.py     # Đánh giá khả năng chống ảo tưởng của chatbot
 ```
 
 ---
@@ -77,11 +85,18 @@ Nhập câu hỏi của bạn. Chatbot sẽ tự động tìm kiếm tài liệu
 ```bash
 python test_retrieval.py
 ```
-Chương trình sẽ in ra các chỉ số `Mean hit@1`, `Mean hit@3`, `Mean recall@1`, `Mean recall@3`, `Mean recall@5` và danh sách các câu hỏi tìm kiếm sai.
+Chương trình sẽ in ra các chỉ số `Mean hit@1`, `Mean hit@3`, `Mean recall@1`, `Mean recall@3`, `Mean recall@5` và danh sách các câu hỏi tìm kiếm sai. Kết quả cũng sẽ được lưu vào file `test_results/test_retrieval_result.txt`.
 
 #### Bước 4: Đánh giá chất lượng trả lời (QA Evaluation)
 Để kiểm tra xem Chatbot trả lời có đúng so với câu trả lời mẫu hay không bằng cách dùng LLM chấm điểm:
 ```bash
 python test_qa.py
 ```
-Kết quả chấm điểm (Đúng/Sai tương ứng `1`/`0`) sẽ được thống kê ở cuối tiến trình kèm các trường hợp trả lời sai để dễ dàng gỡ lỗi.
+Kết quả chấm điểm (Đúng/Sai tương ứng `1`/`0`) sẽ được thống kê ở cuối tiến trình kèm các trường hợp trả lời sai để dễ dàng gỡ lỗi. Chi tiết kết quả sẽ được ghi vào file `test_results/test_qa_result.txt`.
+
+#### Bước 5: Đánh giá chống ảo tưởng (Hallucination Evaluation)
+Để đánh giá khả năng phản hồi "Tôi không tìm thấy thông tin trong tài liệu." khi chatbot gặp câu hỏi ngoài phạm vi tài liệu:
+```bash
+python test_hallucination.py
+```
+Màn hình sẽ hiển thị tiến độ chạy và kết xuất kết quả tổng quan (số test pass, danh sách top 5 test fail). Kết quả chi tiết sẽ được lưu tự động tại file `test_results/test_hallucination_result.txt`.
